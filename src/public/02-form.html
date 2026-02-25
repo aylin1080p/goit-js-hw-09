@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+      .feedback-form {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        gap: 20px;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .feedback-form label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 500;
+      }
+      .feedback-form input,
+      .feedback-form textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+      }
+      .feedback-form input:focus,
+      .feedback-form textarea:focus {
+        border-color: #4e75ff;
+      }
+      .feedback-form button {
+        padding: 12px;
+        background-color: #4e75ff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .feedback-form button:hover {
+        background-color: #3b5bdb;
+      }
+      nav {
+        margin-bottom: 30px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #4e75ff;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./01-gallery.html">← Back to Gallery</a>
+    </nav>
+
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      window.global = window;
+    </script>
+    <script type="module" src="./js/02-form.js"></script>
+  </body>
+</html>
