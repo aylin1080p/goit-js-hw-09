@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // Göreceli yollar için
+  base: '/goit-js-hw-09/', // Göreceli yollar için
   build: {
     rollupOptions: {
       input: {
