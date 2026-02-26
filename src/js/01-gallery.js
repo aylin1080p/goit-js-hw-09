@@ -1,6 +1,4 @@
 // 1. Kütüphane ve CSS importları
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 // 2. Tüm resim verileri (Tam liste)
 const images = [
