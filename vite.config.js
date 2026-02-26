@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite';
-import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
-  // GitHub deponuzun adı neyse onu yazmalısınız: 'goit-js-hw-09'
-  base: '/goit-js-hw-09/',
+  base: './', // Göreceli yollar için
   build: {
     rollupOptions: {
       input: {
@@ -13,5 +11,4 @@ export default defineConfig({
       },
     },
   },
-  plugins: [FullReload(['./src/**/*'])],
 });
