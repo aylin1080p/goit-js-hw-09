@@ -1,29 +1,16 @@
 import { defineConfig } from 'vite';
-import { globSync } from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
-export default defineConfig(({ command }) => {
-  return {
-    define: {
-      global: 'window', // <-- İŞTE BEYAZ EKRANI ÇÖZECEK O SİHİRLİ SATIR
-    },
-    root: 'src',
-    build: {
-      sourcemap: true,
-      rollupOptions: {
-        input: globSync('./src/*.html'),
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          },
-          entryFileNames: 'commonHelpers.js',
-        },
+export default defineConfig({
+  root: './',
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        gallery: './01-gallery.html',
+        form: './02-form.html',
       },
-      outDir: '../dist',
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
-  };
+  },
+  plugins: [FullReload(['./src/**/*'])],
 });
